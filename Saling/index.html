@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-left">
+            <button class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="logo">
+                <i class="fas fa-fire"></i>
+            </div>
+            <div class="search-container">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search..." class="search-input">
+            </div>
+        </div>
+        <div class="header-right">
+            <button class="add-btn">
+                <i class="fas fa-plus"></i>
+            </button>
+            <button class="settings-btn">
+                <i class="fas fa-cog"></i>
+                <span>Settings</span>
+            </button>
+            <button class="share-btn">
+                <i class="fas fa-share-alt"></i>
+            </button>
+            <button class="help-btn">
+                <i class="fas fa-question-circle"></i>
+            </button>
+            <button class="notifications-btn">
+                <i class="fas fa-bell"></i>
+            </button>
+        </div>
+    </header>
+
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="user-profile">
+                <div class="user-avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="user-info">
+                    <div class="user-name">Tumbu John</div>
+                    <div class="user-email">tumbu.john@longthu...</div>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="nav-item active">
+                        <i class="fas fa-chart-pie"></i>
+                        <span>Dashboard</span>
+                    </li>
+                    <li class="nav-item">
+                        <i class="fas fa-users"></i>
+                        <span>Customers</span>
+                    </li>
+                    <li class="nav-item">
+                        <i class="fas fa-chart-line"></i>
+                      <span> <a href="../sales1/index.html">
+                        Sales</a></span> 
+                        <i class="fas fa-chevron-left expand-icon"></i>
+                    </li>
+                    <li class="nav-item">
+                        <i class="fas fa-credit-card"></i>
+                        <span>Subscriptions</span>
+                    </li>
+                    <li class="nav-item">
+                        <i class="fas fa-receipt"></i>
+                        <span>Expenses</span>
+                    </li>
+                    <li class="nav-item">
+                        <i class="fas fa-file-contract"></i>
+                        <span>Contracts</span>
+                    </li>
+                    <li class="nav-item">
+                        <i class="fas fa-project-diagram"></i>
+                        <span>Projects</span>
+                    </li>
+                    <li class="nav-item">
+                        <i class="fas fa-tasks"></i>
+                        <span>Tasks</span>
+                    </li>
+                    <li class="nav-item">
+                        <i class="fas fa-life-ring"></i>
+                        <span>Support</span>
+                    </li>
+                    <li class="nav-item">
+                        <i class="fas fa-bullseye"></i>
+                        <span>Leads</span>
+                    </li>
+                    <li class="nav-item">
+                        <i class="fas fa-calculator"></i>
+                        <span>Estimate Request</span>
+                    </li>
+                    <li class="nav-item">
+                        <i class="fas fa-book"></i>
+                        <span>Knowledge Base</span>
+                    </li>
+                    <li class="nav-item">
+                        <i class="fas fa-tools"></i>
+                        <span>Utilities</span>
+                        <i class="fas fa-chevron-left expand-icon"></i>
+                    </li>
+                    <li class="nav-item">
+                        <i class="fas fa-chart-bar"></i>
+                        <span>Reports</span>
+                        <i class="fas fa-chevron-left expand-icon"></i>
+                    </li>
+                    <li class="nav-item">
+                        <i class="fas fa-cog"></i>
+                        <span>Setup</span>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Dashboard Options -->
+            <div class="dashboard-options">
+                <button class="options-btn">
+                    <i class="fas fa-cog"></i>
+                    Dashboard Options
+                </button>
+            </div>
+
+            <!-- Stats Cards -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <i class="fas fa-file-invoice"></i>
+                        <span>Invoices Awaiting Payment</span>
+                    </div>
+                    <div class="stat-count">0 / 0</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 0%"></div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <i class="fas fa-exchange-alt"></i>
+                        <span>Converted Leads</span>
+                    </div>
+                    <div class="stat-count">0 / 0</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 0%"></div>
+                    </div>
+                </div>
+
+                <div class="stat-card active">
+                    <div class="stat-header">
+                        <i class="fas fa-tasks"></i>
+                        <span>Projects in Progress</span>
+                    </div>
+                    <div class="stat-count">1 / 1</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill active" style="width: 100%"></div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <span>Tasks Not Finished</span>
+                    </div>
+                    <div class="stat-count">1 / 1</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill dark" style="width: 100%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Overview Section -->
+            <div class="overview-section">
+                <div class="overview-grid">
+                    <!-- Invoice Overview -->
+                    <div class="overview-card">
+                        <div class="overview-header">
+                            <i class="fas fa-file-invoice"></i>
+                            <h3>Invoice overview</h3>
+                        </div>
+                        <div class="overview-stats">
+                            <div class="stat-item">
+                                <span class="stat-label">Draft</span>
+                                <span class="stat-value">0</span>
+                                <span class="stat-percent">0%</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Not Sent</span>
+                                <span class="stat-value">0</span>
+                                <span class="stat-percent">0%</span>
+                            </div>
+                            <div class="stat-item red">
+                                <span class="stat-label">Unpaid</span>
+                                <span class="stat-value">0</span>
+                                <span class="stat-percent">0%</span>
+                            </div>
+                            <div class="stat-item orange">
+                                <span class="stat-label">Partially Paid</span>
+                                <span class="stat-value">0</span>
+                                <span class="stat-percent">0%</span>
+                            </div>
+                            <div class="stat-item red">
+                                <span class="stat-label">Overdue</span>
+                                <span class="stat-value">0</span>
+                                <span class="stat-percent">0%</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Paid</span>
+                                <span class="stat-value">0</span>
+                                <span class="stat-percent">0%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Estimate Overview -->
+                    <div class="overview-card">
+                        <div class="overview-header">
+                            <i class="fas fa-calculator"></i>
+                            <h3>Estimate overview</h3>
+                        </div>
+                        <div class="overview-stats">
+                            <div class="stat-item">
+                                <span class="stat-label">Draft</span>
+                                <span class="stat-value">0</span>
+                                <span class="stat-percent">0%</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Not Sent</span>
+                                <span class="stat-value">0</span>
+                                <span class="stat-percent">0%</span>
+                            </div>
+                            <div class="stat-item blue">
+                                <span class="stat-label">Sent</span>
+                                <span class="stat-value">0</span>
+                                <span class="stat-percent">0%</span>
+                            </div>
+                            <div class="stat-item orange">
+                                <span class="stat-label">Expired</span>
+                                <span class="stat-value">0</span>
+                                <span class="stat-percent">0%</span>
+                            </div>
+                            <div class="stat-item red">
+                                <span class="stat-label">Declined</span>
+                                <span class="stat-value">0</span>
+                                <span class="stat-percent">0%</span>
+                            </div>
+                            <div class="stat-item green">
+                                <span class="stat-label">Accepted</span>
+                                <span class="stat-value">0</span>
+                                <span class="stat-percent">0%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Proposal Overview -->
+                    <div class="overview-card">
+                        <div class="overview-header">
+                            <i class="fas fa-file-alt"></i>
+                            <h3>Proposal overview</h3>
+                        </div>
+                        <div class="overview-stats">
+                            <div class="stat-item">
+                                <span class="stat-label">Draft</span>
+                                <span class="stat-value">0</span>
+                                <span class="stat-percent">0%</span>
+                            </div>
+                            <div class="stat-item blue">
+                                <span class="stat-label">Sent</span>
+                                <span class="stat-value">0</span>
+                                <span class="stat-percent">0%</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Open</span>
+                                <span class="stat-value">0</span>
+                                <span class="stat-percent">0%</span>
+                            </div>
+                            <div class="stat-item blue">
+                                <span class="stat-label">Revised</span>
+                                <span class="stat-value">0</span>
+                                <span class="stat-percent">0%</span>
+                            </div>
+                            <div class="stat-item red">
+                                <span class="stat-label">Declined</span>
+                                <span class="stat-value">0</span>
+                                <span class="stat-percent">0%</span>
+                            </div>
+                            <div class="stat-item green">
+                                <span class="stat-label">Accepted</span>
+                                <span class="stat-value">0</span>
+                                <span class="stat-percent">0%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Invoice Summary -->
+                <div class="invoice-summary">
+                    <div class="summary-card yellow">
+                        <h4>Outstanding Invoices</h4>
+                        <div class="amount">$0.00</div>
+                    </div>
+                    <div class="summary-card orange">
+                        <h4>Past Due Invoices</h4>
+                        <div class="amount">$0.00</div>
+                    </div>
+                    <div class="summary-card green">
+                        <h4>Paid Invoices</h4>
+                        <div class="amount">$0.00</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Sidebar -->
+            <div class="right-sidebar">
+                <!-- To Do Items -->
+                <div class="widget">
+                    <div class="widget-header">
+                        <i class="fas fa-check-circle"></i>
+                        <span>My To Do Items</span>
+                        <div class="widget-actions">
+                            <button class="view-all-btn">View All</button>
+                            <button class="new-todo-btn">New To Do</button>
+                        </div>
+                    </div>
+                    <div class="widget-content">
+                        <div class="todo-section">
+                            <div class="todo-header">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                <span>Latest to do's</span>
+                            </div>
+                            <div class="empty-state">No todos found</div>
+                        </div>
+                        <div class="todo-section">
+                            <div class="todo-header">
+                                <i class="fas fa-check"></i>
+                                <span>Latest finished to do's</span>
+                            </div>
+                            <div class="empty-state">No finished todos found</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Leads Overview -->
+                <div class="widget">
+                    <div class="widget-header">
+                        <i class="fas fa-chart-pie"></i>
+                        <span>Leads Overview</span>
+                    </div>
+                    <div class="widget-content">
+                        <div class="leads-chart">
+                            <canvas id="leadsChart" width="200" height="100"></canvas>
+                        </div>
+                        <div class="leads-legend">
+                            <div class="legend-item">
+                                <span class="legend-color customer"></span>
+                                <span>Customer</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-color lost-leads"></span>
+                                <span>Lost Leads</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Tabs -->
+            <div class="bottom-tabs">
+                <button class="tab-btn active">
+                    <i class="fas fa-tasks"></i>
+                    My Tasks
+                </button>
+                <button class="tab-btn">
+                    <i class="fas fa-project-diagram"></i>
+                    My Projects
+                </button>
+                <button class="tab-btn">
+                    <i class="fas fa-bell"></i>
+                    My Reminders
+                </button>
+                <button class="tab-btn">
+                    <i class="fas fa-ticket-alt"></i>
+                    Tickets
+                </button>
+                <button class="tab-btn">
+                    <i class="fas fa-bullhorn"></i>
+                    Announcements
+                </button>
+                <button class="tab-btn">
+                    <i class="fas fa-clock"></i>
+                    Latest Activity
+                </button>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
